@@ -1,4 +1,4 @@
-function takeANumber(line, name) {
+function takeANumber(line) {
   //var i = 0;
   //var string = "test";
 
@@ -7,11 +7,21 @@ function takeANumber(line, name) {
   return "Welcome, " + name + ". You are number " + line.length + " in line.";
 }
 
+let line = []
+takeANumber(line) // line is [1]
+takeANumber(line) // line is [1,2]
+
+nowServing(line) //line is [2]
+nowServing(line) // line is []
+
+takeANumber(line) // line is [3]
+
+
 function nowServing(line) {
   if (line.length == 0) {
     return "There is nobody waiting to be served!";
   } else {
-    var name = line[0];
+    //var name = line[0];
     return `Currently serving ${line.shift()}.`;
   }
 }
