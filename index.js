@@ -2,8 +2,8 @@ function takeANumber(line, name) {
   var i = 0;
   var string = "test";
 
-  line[line.length] = name;
-
+  //line[line.length] = name;
+  line.push(name)
   return "Welcome, " + name + ". You are number " + line.length + " in line.";
 }
 
