@@ -1,10 +1,16 @@
+var totalServed = 0
+
 function takeANumber(line) {
   //var i = 0;
   //var string = "test";
 
   //line[line.length] = name;
-  line.push(name)
-  return "Welcome, " + name + ". You are number " + line.length + " in line.";
+
+  line.push(++totalServed)
+  //totalServed +=1;
+
+  //line.push(name)
+  return ". You are number " + line.length + " in line.";
 }
 
 let line = []
